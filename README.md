@@ -5,7 +5,7 @@
 ## 🛠 Технологічний стек
 * **Мова:** Python 3.10+
 * **Фреймворк:** aiogram 3.x
-* **База даних:** SQLite
+* **База даних:** PostgreSQL (драйвер asyncpg)
 * **ORM:** SQLAlchemy (Async)
 * **Керування станами:** FSM (Finite State Machine)
 
@@ -39,10 +39,11 @@
 
 4. **Налаштуйте змінні середовища:**
     Скопіюйте файл .env.example та перейменуйте його на .env.
-    Відкрийте .env і додайте свій токен бота (від @BotFather) та ваш Telegram ID:
+    Відкрийте .env і додайте свої дані для підключення:
     
-    BOT_TOKEN=ваш_токен
-    ADMIN_IDS=ваш_ідентифікатор
+    BOT_TOKEN=ваш_токен_від_BotFather
+    ADMIN_IDS=ваш_ідентифікатор_telegram
+    DB_URL=postgresql+asyncpg://користувач:пароль@адреса_сервера/назва_бази
 
 5. **Запустіть бота:**
     python main.py

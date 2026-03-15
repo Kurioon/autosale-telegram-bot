@@ -11,5 +11,8 @@ admin_ids_str = os.getenv("ADMIN_IDS", "")
 # Якщо список порожній, помилки не буде
 ADMIN_IDS = [int(id.strip()) for id in admin_ids_str.split(",") if id.strip()]
 
+# Зчитуємо посилання на базу даних з файлу .env
+DB_URL = os.getenv("DB_URL")
+
 if not BOT_TOKEN:
     raise ValueError("Змінна BOT_TOKEN не знайдена у файлі .env!")

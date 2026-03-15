@@ -1,10 +1,10 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncAttrs
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import String
+from sqlalchemy import String, Integer
+from config import DB_URL
 
-# Створюємо підключення до нашої майбутньої бази SQLite
-# Файл бази даних буде називатися cars.db
-engine = create_async_engine("sqlite+aiosqlite:///database/cars.db", echo=False)
+# Замінюємо старий шлях (sqlite+aiosqlite...) на змінну DB_URL
+engine = create_async_engine(DB_URL, echo=True)
 
 # Створюємо фабрику сесій (через неї ми будемо додавати та шукати авто)
 async_session = async_sessionmaker(engine, expire_on_commit=False)
