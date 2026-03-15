@@ -10,7 +10,7 @@ catalog_router = Router()
 DEFAULT_PHOTO = "https://lightwidget.com/wp-content/uploads/local-file-not-found.png"
 
 def format_car_text(car):
-    return (
+    text = (
         f"<b>{car.make} {car.model} ({car.year})</b>\n"
         f"💰 Ціна: {car.price}$\n\n"
         f"⚙️ Двигун: {car.engine_volume} л ({car.fuel_type})\n"
