@@ -96,7 +96,7 @@ def get_fuel_menu():
 def get_trans_menu():
     builder = InlineKeyboardBuilder()
     builder.button(text="Автомат", callback_data=FilterCB(action="trans", value="Автомат", name="Автомат"))
-    builder.button(text="Механіка", callback_data=FilterCB(action="trans", value="Ручна", name="Механіка"))
+    builder.button(text="Механіка", callback_data=FilterCB(action="trans", value="Механіка", name="Механіка"))
     builder.button(text="⬅️ Назад", callback_data=FilterCB(action="back"))
     builder.adjust(2, 1)
     return builder.as_markup()
